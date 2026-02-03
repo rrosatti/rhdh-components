@@ -1,0 +1,57 @@
+kind: Component
+apiVersion: backstage.io/v1alpha1
+metadata:
+  name: rgalvao-testing-konflux-plugin-component
+  description: (rgalvao) Testing Konflux Plugin - Component
+  title: (rgalvao) Testing Konflux Plugin - Component
+  annotations:
+    konflux-ci.dev/overview: "true"
+    konflux-ci.dev/konflux: "true"
+    konflux-ci.dev/ci: "true"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/stonesoup
+---
+kind: Component
+apiVersion: backstage.io/v1alpha1
+metadata:
+  name: rgalvao-testing-konflux-plugin-component-subcomponent-a
+  description: (rgalvao) Testing Konflux Plugin - Subcomponent A
+  title: (rgalvao) Testing Konflux Plugin - Subcomponent A
+  annotations:
+    konflux-ci.dev/overview: "true"
+    konflux-ci.dev/konflux: "true"
+    konflux-ci.dev/ci: "true"
+    konflux-ci.dev/clusters: |
+      - cluster: stone-stg-rh01
+        namespace: rh-ee-rgalvao-tenant
+        applications:
+          - application-a
+          - application-b
+spec:
+  subcomponentOf: rgalvao-testing-konflux-plugin-component
+  type: service
+  lifecycle: experimental
+  owner: group:default/stonesoup
+---
+kind: Component
+apiVersion: backstage.io/v1alpha1
+metadata:
+  name: rgalvao-testing-konflux-plugin-component-subcomponent-b
+  description: (rgalvao) Testing Konflux Plugin - Subcomponent B
+  title: (rgalvao) Testing Konflux Plugin - Subcomponent B
+  annotations:
+    konflux-ci.dev/overview: "true"
+    konflux-ci.dev/konflux: "true"
+    konflux-ci.dev/ci: "true"
+    konflux-ci.dev/clusters: |
+      - cluster: stone-stg-rh01
+        namespace: wlin-tenant
+        applications:
+          - application-c
+spec:
+  subcomponentOf: rgalvao-testing-konflux-plugin-component
+  type: service
+  lifecycle: experimental
+  owner: group:default/stonesoup
