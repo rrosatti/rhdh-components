@@ -55,3 +55,28 @@ spec:
   type: service
   lifecycle: experimental
   owner: user:default/rgalvao
+---
+kind: Component
+apiVersion: backstage.io/v1alpha1
+metadata:
+  name: rgalvao-testing-konflux-plugin-component-no-subcomponents
+  description: (rgalvao) Testing Konflux Plugin - No subcomponents
+  title: (rgalvao) Testing Konflux Plugin - No subcomponents
+  annotations:
+    konflux-ci.dev/overview: "true"
+    konflux-ci.dev/konflux: "true"
+    konflux-ci.dev/ci: "true"
+    konflux-ci.dev/clusters: |
+      - cluster: stone-stg-rh01
+        namespace: rh-ee-rgalvao-tenant
+        applications:
+          - application-a
+          - application-b
+      - cluster: stone-stg-rh01
+        namespace: wlin-tenant
+        applications:
+          - application-c
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:default/rgalvao
