@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1beta1
+kind: User
+metadata:
+  namespace: default
+  name: rrosatti
+  uid: abc123def456ghi789
+  annotations:
+    github.com/user-login: rrosatti
+spec:
+  profile:
+    displayName: Rodrigo Galvao
+    email: rgalvao@redhat.com
+  memberOf: []
