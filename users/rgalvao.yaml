@@ -4,6 +4,8 @@ metadata:
   namespace: default
   name: rgalvao
   uid: abc123def456
+  annotations:
+    github.com/user-login: rrosatti
 spec:
   profile:
     displayName: Rodrigo Galvao
