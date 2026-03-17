@@ -11,7 +11,8 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: user:default/rgalvao
+  # owner: user:default/rgalvao
+  owner: group:default/stonesoup
 ---
 kind: Component
 apiVersion: backstage.io/v1alpha1
@@ -33,7 +34,8 @@ spec:
   subcomponentOf: rgalvao-testing-konflux-plugin-component
   type: service
   lifecycle: experimental
-  owner: user:default/rgalvao
+  # owner: user:default/rgalvao
+  owner: group:default/stonesoup
 ---
 kind: Component
 apiVersion: backstage.io/v1alpha1
@@ -54,7 +56,8 @@ spec:
   subcomponentOf: rgalvao-testing-konflux-plugin-component
   type: service
   lifecycle: experimental
-  owner: user:default/rgalvao
+  # owner: user:default/rgalvao
+  owner: group:default/stonesoup
 ---
 #
 #
