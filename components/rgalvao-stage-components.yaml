@@ -30,6 +30,7 @@ metadata:
         applications:
           - application-a
           - application-b
+          - application-d
 spec:
   subcomponentOf: rgalvao-testing-konflux-plugin-component
   type: service
