@@ -1,0 +1,80 @@
+---
+kind: Component
+apiVersion: backstage.io/v1alpha1
+metadata:
+  name: rgalvao-example-1
+  description: Example 1 (current behavior)
+  title: Example 1 (current behavior)
+  annotations:
+    konflux-ci.dev/overview: "true"
+    konflux-ci.dev/konflux: "true"
+    konflux-ci.dev/ci: "true"
+    konflux-ci.dev/clusters: |
+      - cluster: stone-stg-rh01
+        namespace: rh-ee-rgalvao-tenant
+        applications:
+          - application-a
+          - application-b
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:guest
+---
+kind: Component
+apiVersion: backstage.io/v1alpha1
+metadata:
+  name: rgalvao-example-2
+  description: Example 2 (glob patterns)
+  title: Example 2 (glob patterns)
+  annotations:
+    konflux-ci.dev/overview: "true"
+    konflux-ci.dev/konflux: "true"
+    konflux-ci.dev/ci: "true"
+    konflux-ci.dev/clusters: |
+      - cluster: stone-stg-rh01
+        namespace: rh-ee-rgalvao-tenant
+        applications:
+          - application-*
+          - "*-123"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:guest
+---
+kind: Component
+apiVersion: backstage.io/v1alpha1
+metadata:
+  name: rgalvao-example-3
+  description: Example 3 (all applications - with wildcard)
+  title: Example 3 (all applications - with wildcard)
+  annotations:
+    konflux-ci.dev/overview: "true"
+    konflux-ci.dev/konflux: "true"
+    konflux-ci.dev/ci: "true"
+    konflux-ci.dev/clusters: |
+      - cluster: stone-stg-rh01
+        namespace: rh-ee-rgalvao-tenant
+        applications:
+          - "*"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:guest
+---
+kind: Component
+apiVersion: backstage.io/v1alpha1
+metadata:
+  name: rgalvao-example-4
+  description: Example 4 (no applications specified)
+  title: Example 4 (no applications specified)
+  annotations:
+    konflux-ci.dev/overview: "true"
+    konflux-ci.dev/konflux: "true"
+    konflux-ci.dev/ci: "true"
+    konflux-ci.dev/clusters: |
+      - cluster: stone-stg-rh01
+        namespace: rh-ee-rgalvao-tenant
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:guest
